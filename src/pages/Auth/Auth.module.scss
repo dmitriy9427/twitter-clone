@@ -1,0 +1,79 @@
+.wrapper {
+  display: flex;
+  height: 100vh;
+  background-color: #fff;
+  width: 100%;
+}
+
+.imageBlock {
+  background-color: #0d5ceb;
+  width: 50%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  color: #000;
+  font-size: 40px;
+  max-width: 380px;
+  width: 100%;
+  margin: 170px auto 20px;
+}
+.subHeader {
+  max-width: 380px;
+  width: 100%;
+  margin: 0 auto 30px;
+}
+.listItems {
+  list-style: none;
+  padding: 0;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.listTyp {
+  padding-right: 10px;
+}
+.buttonBlock {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 40px;
+  padding-top: 15px;
+}
+
+.icon {
+  color: blue;
+}
+.regi {
+  max-width: 350px;
+  width: 100%;
+  background-color: blue;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 8px;
+  font-size: 24px;
+  margin: 0 auto 20px;
+  cursor: pointer;
+}
+.login {
+  max-width: 350px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  border: none;
+  outline: 1px solid #0056ff;
+  color: #0056ff;
+  padding: 8px;
+  margin: 0 auto 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
