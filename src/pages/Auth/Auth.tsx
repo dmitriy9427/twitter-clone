@@ -1,23 +1,37 @@
 import React from 'react';
-import { Outlet, Link, useParams } from "react-router-dom"
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import LanguageIcon from '@mui/icons-material/Language';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import CastForEducationIcon from '@mui/icons-material/CastForEducation';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import classes from "./Auth.module.scss";
+import { Outlet, useNavigate } from 'react-router-dom';
+// import Login from '../Login';
+// import Register from '../Register';
 
-function Auth() {
-    const params = useParams();
+type autchProps = {
 
-    console.log(params);
+    setOpenModalRegister: (v: boolean) => void;
+    setOpenModalLogin: (v: boolean) => void;
+}
 
+const Auth: React.FC<autchProps> = ({ setOpenModalRegister, setOpenModalLogin }) => {
+
+    const navigate = useNavigate()
+
+    const onClickLogin = () => {
+        setOpenModalLogin(true)
+        navigate('login')
+    }
+    const onClickRegister = () => {
+        setOpenModalRegister(true)
+        navigate('register')
+    }
 
     return (
         <>
             <div className={classes.wrapper}>
                 <section className={classes.imageBlock}>
-
                     <ul color='white' className={classes.listItems}>
                         <svg width="250px" height="250px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="24" cy="24" r="20" fill="#1DA1F2" />
@@ -33,9 +47,10 @@ function Auth() {
                     <TwitterIcon className={classes.icon} />
                     <h1 className={classes.header}>Будь в курсе происходящего</h1>
                     <h4 className={classes.subHeader}>Присоединяйтесь к Твиттеру прямо сейчас!</h4>
-                    <Link to={'/register'}><button className={classes.regi}>Зарегистрироваться</button></Link>
-                    <Link to={"/login"}><button className={classes.login}>Войти</button></Link>
+                    <button onClick={onClickRegister} className={classes.regi}>Зарегистрироваться</button>
+                    <button onClick={onClickLogin} className={classes.login}>Войти</button>
                 </section>
+
             </div >
             <Outlet />
         </>
