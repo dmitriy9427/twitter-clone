@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styles from './Login.module.scss'
-import closeIcon from '..//images/close.svg';
-import twitterIcon from '..//images/twitter.svg'
+import closeIcon from '../../images/close.svg';
+import twitterIcon from '../../images/twitter.svg'
 
 type LoginProps = {
     closeModal: () => void
@@ -32,7 +32,6 @@ const Login: React.FC<LoginProps> = ({ closeModal }) => {
 
         <div className={styles.div}></div>
         <div className={styles.wrapper} >
-
             <form className={styles.form}>
                 <div onClick={closeModal} className={styles.close}><img className={styles.closeIcon} src={closeIcon} alt="close-icon" /></div>
                 <img className={styles.twitterIcon} src={twitterIcon} alt="twitterIcon" />

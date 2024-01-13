@@ -1,0 +1,68 @@
+.sidebar {
+  max-width: 150px;
+  width: 100%;
+
+  &__list {
+    &-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-decoration: none;
+      max-width: 150px;
+      width: 100%;
+
+      &-image {
+        margin-right: 10px;
+        &-img {
+        }
+      }
+
+      &-title {
+        color: black;
+        position: relative;
+        // @media (max-width: 700px) {
+        //   display: none;
+        // }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          border-bottom: 1px solid blue;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+  .active {
+    svg {
+      fill: blue;
+      path {
+        stroke: blue;
+      }
+      g {
+        fill: blue;
+      }
+    }
+    h5 {
+      color: blue;
+      position: relative;
+
+      // @media (max-width: 700px) {
+      //     display: none;
+      //   }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid blue;
+        transition: all 0.5s;
+      }
+    }
+  }
+}

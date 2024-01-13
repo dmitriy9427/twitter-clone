@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './Login.module.scss';
-import closeIcon from '..//images/close.svg';
-import twitterIcon from '..//images/twitter.svg';
+import closeIcon from '../../images/close.svg';
+import twitterIcon from '../../images/twitter.svg';
 
 
 type RegisterProps = {
