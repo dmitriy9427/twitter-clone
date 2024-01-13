@@ -13,7 +13,7 @@
   }
   &__publich {
     display: grid;
-    grid-template-columns: 90px 610px;
+    grid-template-columns: 85px 610px;
     align-items: center;
     outline: 1px solid rgb(186, 186, 186);
     border-radius: 10px;
@@ -23,11 +23,11 @@
     }
     &-input {
       border: none;
-
-      padding: 15px 5px;
+      padding: 15px 3px;
       max-width: 590px;
       &:focus {
-        outline: 1px solid blue;
+        border-radius: 10px;
+        outline: 1px solid #50b7f5;
       }
     }
   }

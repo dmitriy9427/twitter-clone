@@ -1,6 +1,12 @@
 .sidebar {
   max-width: 150px;
   width: 100%;
+  margin-left: 10px;
+
+  &__svg {
+    display: block;
+    margin-bottom: 20px;
+  }
 
   &__list {
     &-item {
@@ -10,6 +16,8 @@
       text-decoration: none;
       max-width: 150px;
       width: 100%;
+      padding: 2px;
+      border-radius: 10px;
 
       &-image {
         margin-right: 10px;
@@ -30,24 +38,26 @@
           bottom: 0;
           left: 0;
           width: 0%;
-          border-bottom: 1px solid blue;
+          border-bottom: 1px solid #50b7f5;
           transition: all 0.5s;
         }
       }
     }
   }
   .active {
+    background-color: #f1f1f1;
+
     svg {
-      fill: blue;
+      fill: #50b7f5;
       path {
-        stroke: blue;
+        stroke: #50b7f5;
       }
       g {
-        fill: blue;
+        fill: #50b7f5;
       }
     }
     h5 {
-      color: blue;
+      color: #50b7f5;
       position: relative;
 
       // @media (max-width: 700px) {
@@ -60,7 +70,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        border-bottom: 1px solid blue;
+        border-bottom: 1px solid #50b7f5;
         transition: all 0.5s;
       }
     }
