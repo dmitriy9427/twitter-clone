@@ -18,7 +18,10 @@
       width: 100%;
       padding: 2px;
       border-radius: 10px;
-
+      margin-bottom: 4px;
+      &:hover {
+        background-color: rgba(241, 241, 241, 0.5);
+      }
       &-image {
         margin-right: 10px;
         &-img {
@@ -74,5 +77,17 @@
         transition: all 0.5s;
       }
     }
+  }
+  &__button {
+    background-color: #50b7f5;
+    border-radius: 30px;
+    border: none;
+    max-width: 150px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
   }
 }

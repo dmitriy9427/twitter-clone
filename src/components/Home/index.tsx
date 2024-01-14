@@ -41,6 +41,7 @@ const Home: React.FC = () => {
                         <h4 className="home__post-header-name">Рябов Дмитрий</h4>
                         <p className="home__post-header-tag">@ryabov1994</p>
                     </div>
+
                         <p className="home__post-info">Mercedes-Benz Е-класс (ориг. E-Klasse, ранее нем. Einspritzung — «топливный впрыск») — серия легковых автомобилей бизнес-класса немецкой торговой марки Mercedes-Benz, официально представленная с 1993 года и в настоящее время состоящая из пяти поколений.</p>
                         <div className="home__post-image"><img className="home__post-img" src="https://garriarc.ru/wp-content/uploads/2022/01/%D0%B5200.jpg" alt="mersedes" /></div>
                         <div className="home__post-icons">
