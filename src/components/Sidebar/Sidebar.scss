@@ -2,6 +2,9 @@
   max-width: 150px;
   width: 100%;
   margin-left: 10px;
+  position: fixed;
+  top: 30px;
+  left: 10px;
 
   &__svg {
     display: block;
@@ -9,6 +12,7 @@
   }
 
   &__list {
+    margin-top: 0;
     &-item {
       display: flex;
       flex-direction: row;
@@ -31,9 +35,6 @@
       &-title {
         color: black;
         position: relative;
-        // @media (max-width: 700px) {
-        //   display: none;
-        // }
 
         &::before {
           content: "";
@@ -89,5 +90,9 @@
     color: white;
     font-weight: 700;
     cursor: pointer;
+
+    &:active {
+      background-color: darken($color: #50b7f5, $amount: 10);
+    }
   }
 }

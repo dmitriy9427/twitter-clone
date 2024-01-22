@@ -1,0 +1,104 @@
+.tweet {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+
+  &__background {
+    background-color: #000;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-close {
+    }
+    &-button {
+      background-color: transparent;
+      color: #50b7f5;
+      border: none;
+      font-weight: 700;
+      margin-right: 30px;
+    }
+  }
+
+  &__form {
+    background-color: white;
+    max-width: 500px;
+    height: 400px;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+    top: 50px;
+    padding: 20px;
+  }
+  &__label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+
+    &-avatar {
+      border-radius: 50%;
+      top: 10px;
+      left: 10px;
+      position: absolute;
+      width: 35px;
+      height: 35px;
+    }
+    &-textarea {
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid rgba(223, 221, 221, 0.5);
+      border-top: 2px solid rgba(223, 221, 221, 0.5);
+      resize: none;
+      padding-left: 50px;
+      padding-top: 15px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    &-item {
+    }
+  }
+
+  &__btn {
+    background-color: #50b7f5;
+    border-radius: 30px;
+    border: none;
+    max-width: 150px;
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:active {
+      background-color: darken($color: #50b7f5, $amount: 10);
+    }
+  }
+}
