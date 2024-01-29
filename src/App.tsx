@@ -12,14 +12,9 @@ import Lists from './components/Lists';
 import Profile from './components/Profile';
 import Home from './components/Home';
 
-const App = () => {
+const App: React.FC = () => {
   // const [openModalLogin, setOpenModalLogin] = useState<boolean>(false)
   // const [openModalRegister, setOpenModalRegister] = useState<boolean>(false)
-  const [text, setText] = useState<string>('');
-
-
-  const navigate = useNavigate()
-
 
   // const closeModal = () => {
   //   setOpenModalRegister(false)
@@ -29,7 +24,7 @@ const App = () => {
 
 
   return (
-    <body>
+    <div>
       <Routes>
         {/* <Route path='/' element={<Auth setOpenModalLogin={setOpenModalLogin} setOpenModalRegister={setOpenModalRegister} />}>
           {/* <Route path='login' element={<Login closeModal={closeModal} />} />
@@ -46,7 +41,7 @@ const App = () => {
           <Route path="profile" element={<Profile />} />
         </Route>
       </Routes>
-    </body>
+    </div>
   );
 }
 
