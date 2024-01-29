@@ -1,60 +1,73 @@
-import React from 'react';
-import AutoStoriesIcon from '@mui/icons-material/AutoStories';
-import LanguageIcon from '@mui/icons-material/Language';
-import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
-import CastForEducationIcon from '@mui/icons-material/CastForEducation';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import classes from "./Auth.module.scss";
-import { Outlet, useNavigate } from 'react-router-dom';
-// import Login from '../Login';
-// import Register from '../Register';
+// import React from 'react';
+// // import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+// // import LanguageIcon from '@mui/icons-material/Language';
+// // import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+// // import CastForEducationIcon from '@mui/icons-material/CastForEducation';
+// // import TwitterIcon from '@mui/icons-material/Twitter';
+// // import classes from "./Auth.module.scss";
+// import { Outlet, useNavigate } from 'react-router-dom';
+// // import Login from '../Login';
+// // import Register from '../Register';
 
-type autchProps = {
+// type autchProps = {
 
-    setOpenModalRegister: (v: boolean) => void;
-    setOpenModalLogin: (v: boolean) => void;
-}
+//     setOpenModalRegister: (v: boolean) => void;
+//     setOpenModalLogin: (v: boolean) => void;
+// }
 
-const Auth: React.FC<autchProps> = ({ setOpenModalRegister, setOpenModalLogin }) => {
+// const Auth: React.FC<autchProps> = ({ setOpenModalRegister, setOpenModalLogin }) => {
 
-    const navigate = useNavigate()
+//     const navigate = useNavigate()
 
-    const onClickLogin = () => {
-        setOpenModalLogin(true)
-        navigate('login')
-    }
-    const onClickRegister = () => {
-        setOpenModalRegister(true)
-        navigate('register')
-    }
+//     const onClickLogin = () => {
+//         setOpenModalLogin(true)
+//         navigate('login')
+//     }
+//     const onClickRegister = () => {
+//         setOpenModalRegister(true)
+//         navigate('register')
+//     }
+
+//     return (
+//         <>
+//             <div className={classes.wrapper}>
+//                 <section className={classes.imageBlock}>
+//                     <ul color='white' className={classes.listItems}>
+//                         <svg width="250px" height="250px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                             <circle cx="24" cy="24" r="20" fill="#1DA1F2" />
+//                             <path fill-rule="evenodd" clip-rule="evenodd" d="M36 16.3086C35.1177 16.7006 34.1681 16.9646 33.1722 17.0838C34.1889 16.4742 34.9697 15.5095 35.3368 14.36C34.3865 14.9247 33.3314 15.3335 32.2107 15.5551C31.3123 14.5984 30.0316 14 28.6165 14C25.8975 14 23.6928 16.2047 23.6928 18.9237C23.6928 19.3092 23.7368 19.6852 23.8208 20.046C19.7283 19.8412 16.1005 17.8805 13.6719 14.9015C13.2479 15.6287 13.0055 16.4742 13.0055 17.3766C13.0055 19.0845 13.8735 20.5916 15.1958 21.4747C14.3878 21.4491 13.6295 21.2275 12.9647 20.8587V20.9203C12.9647 23.3066 14.663 25.296 16.9141 25.7496C16.5013 25.8616 16.0661 25.9224 15.6174 25.9224C15.2998 25.9224 14.991 25.8912 14.6902 25.8336C15.3166 27.7895 17.1357 29.2134 19.2899 29.2534C17.6052 30.5733 15.4822 31.3612 13.1751 31.3612C12.7767 31.3612 12.3848 31.338 12 31.2916C14.1791 32.6884 16.7669 33.5043 19.5475 33.5043C28.6037 33.5043 33.5562 26.0016 33.5562 19.4956C33.5562 19.282 33.5522 19.0693 33.5418 18.8589C34.5049 18.1629 35.34 17.2958 36 16.3086Z" fill="white" />
+//                         </svg>
+//                         <li className={classes.listItem}><AutoStoriesIcon className={classes.listTyp} />Читайте</li>
+//                         <li className={classes.listItem}><LanguageIcon className={classes.listTyp} />Узнавайте</li>
+//                         <li className={classes.listItem}><ConnectWithoutContactIcon className={classes.listTyp} />Общайтесь</li>
+//                         <li className={classes.listItem}><CastForEducationIcon className={classes.listTyp} />Развивайтесь</li>
+//                     </ul>
+//                 </section>
+//                 <section className={classes.buttonBlock}>
+//                     <TwitterIcon className={classes.icon} />
+//                     <h1 className={classes.header}>Будь в курсе происходящего</h1>
+//                     <h4 className={classes.subHeader}>Присоединяйтесь к Твиттеру прямо сейчас!</h4>
+//                     <button onClick={onClickRegister} className={classes.regi}>Зарегистрироваться</button>
+//                     <button onClick={onClickLogin} className={classes.login}>Войти</button>
+//                 </section>
+
+//             </div >
+//             <Outlet />
+//         </>
+//     )
+// }
+
+// export default Auth;
+
+
+import React from 'react'
+
+export function Auth() {
+
 
     return (
         <>
-            <div className={classes.wrapper}>
-                <section className={classes.imageBlock}>
-                    <ul color='white' className={classes.listItems}>
-                        <svg width="250px" height="250px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="24" cy="24" r="20" fill="#1DA1F2" />
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M36 16.3086C35.1177 16.7006 34.1681 16.9646 33.1722 17.0838C34.1889 16.4742 34.9697 15.5095 35.3368 14.36C34.3865 14.9247 33.3314 15.3335 32.2107 15.5551C31.3123 14.5984 30.0316 14 28.6165 14C25.8975 14 23.6928 16.2047 23.6928 18.9237C23.6928 19.3092 23.7368 19.6852 23.8208 20.046C19.7283 19.8412 16.1005 17.8805 13.6719 14.9015C13.2479 15.6287 13.0055 16.4742 13.0055 17.3766C13.0055 19.0845 13.8735 20.5916 15.1958 21.4747C14.3878 21.4491 13.6295 21.2275 12.9647 20.8587V20.9203C12.9647 23.3066 14.663 25.296 16.9141 25.7496C16.5013 25.8616 16.0661 25.9224 15.6174 25.9224C15.2998 25.9224 14.991 25.8912 14.6902 25.8336C15.3166 27.7895 17.1357 29.2134 19.2899 29.2534C17.6052 30.5733 15.4822 31.3612 13.1751 31.3612C12.7767 31.3612 12.3848 31.338 12 31.2916C14.1791 32.6884 16.7669 33.5043 19.5475 33.5043C28.6037 33.5043 33.5562 26.0016 33.5562 19.4956C33.5562 19.282 33.5522 19.0693 33.5418 18.8589C34.5049 18.1629 35.34 17.2958 36 16.3086Z" fill="white" />
-                        </svg>
-                        <li className={classes.listItem}><AutoStoriesIcon className={classes.listTyp} />Читайте</li>
-                        <li className={classes.listItem}><LanguageIcon className={classes.listTyp} />Узнавайте</li>
-                        <li className={classes.listItem}><ConnectWithoutContactIcon className={classes.listTyp} />Общайтесь</li>
-                        <li className={classes.listItem}><CastForEducationIcon className={classes.listTyp} />Развивайтесь</li>
-                    </ul>
-                </section>
-                <section className={classes.buttonBlock}>
-                    <TwitterIcon className={classes.icon} />
-                    <h1 className={classes.header}>Будь в курсе происходящего</h1>
-                    <h4 className={classes.subHeader}>Присоединяйтесь к Твиттеру прямо сейчас!</h4>
-                    <button onClick={onClickRegister} className={classes.regi}>Зарегистрироваться</button>
-                    <button onClick={onClickLogin} className={classes.login}>Войти</button>
-                </section>
-
-            </div >
-            <Outlet />
+            <h1>sefse</h1>
         </>
     )
 }
-
-export default Auth;
