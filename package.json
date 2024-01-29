@@ -2,7 +2,7 @@
   "name": "twitter-clone-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://dmitriy9427.github.io/twitter-clone",
+  "homepage": "https://dmitriy9427.github.io/twitter-clone/",
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
