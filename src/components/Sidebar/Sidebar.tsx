@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 import './Sidebar.scss'
 import { NavLink } from "react-router-dom";
 import ModalTweet from "../ModalTweet";
 
-const Sidebar = () => {
-
+const Sidebar: React.FC = () => {
+    const [openModalTweet, setOpenModalTweet] = useState<boolean>(false)
 
     return (
         <>
@@ -58,10 +58,10 @@ const Sidebar = () => {
                         </g>
                     </svg></div>
                         <h5 className="sidebar__list-item-title">Профиль</h5></NavLink>
-                    <button className='sidebar__button'>Твитнуть</button>
+                    <button onClick={() => setOpenModalTweet(true)} className='sidebar__button'>Твитнуть</button>
                 </nav>
             </div >
-            <ModalTweet />
+            <ModalTweet openModalTweet={openModalTweet} setOpenModalTweet={setOpenModalTweet} />
         </>
 
     )

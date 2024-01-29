@@ -1,16 +1,13 @@
 .widgets {
-  max-width: 200px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  position: fixed;
-  right: 7%;
-  top: 30px;
-  height: 100vh;
+  margin-top: 10px;
 
   &__label {
     position: relative;
+    max-width: 200px;
+    width: 100%;
 
     &-img {
       position: absolute;
@@ -22,7 +19,6 @@
       padding: 18px 25px;
       border: none;
       border-radius: 30px;
-      max-width: 150px;
       width: 100%;
       color: rgba(117, 117, 117, 0.8);
       outline: 1px solid rgba(186, 178, 178, 0.4);

@@ -1,48 +1,64 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import closeIcon from '../../images/close.svg';
-import imageIcon from '../../images/image.svg';
-import gificon from '../../images/gif.svg';
-import chartIcon from '../../images/chart.svg';
-import smileIcon from '../../images/smile.svg';
-import calendarIcon from '../../images/calendar.svg';
+
 
 import './ModalTweet.scss'
+import ModalTweetBtns from "../ModalTeetBtns";
 
-const ModalTweet: React.FC = () => {
+type PropsModalTweet = {
+    openModalTweet: boolean,
+    setOpenModalTweet: (i: boolean) => void,
+}
+
+
+const ModalTweet: React.FC<PropsModalTweet> = ({ openModalTweet, setOpenModalTweet }) => {
+    const [modalText, setModalText] = useState<string>('')
 
     useEffect(() => {
-        document.body.style.overflow = "hidden";
+        if (openModalTweet) {
+            document.body.style.overflow = "hidden";
 
-        return () => {
+            return () => {
+                document.body.style.overflow = "unset"
+            };
+        } else {
             document.body.style.overflow = "unset"
-        };
-    }, []);
+        }
+    }, [openModalTweet]);
+
+    const handleChangeTextArea = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        if (e.currentTarget) {
+            setModalText(e.currentTarget.value)
+        }
+    }
+
+    const handleAddTweet = (e: React.MouseEvent<HTMLButtonElement>): void => {
+        e.preventDefault()
+    }
+
+
 
     return (
-        <div className="tweet">
-            <div className="tweet__background"></div>
 
-            <form className="tweet__form">
-                <div className="tweet__header">
-                    <img className="tweet__header-close" src={closeIcon} alt="close-icon" />
-                    <button className="tweet__header-button">Неотправленные твиты</button>
-                </div>
-                <label className="tweet__label">
-                    <img className="tweet__label-avatar" src="https://www.svgrepo.com/show/384670/account-avatar-profile-user.svg" alt="avatar" />
-                    <textarea className="tweet__label-textarea" name="tweet-form" id="tweet-form" cols={20} rows={20} placeholder="Что происходит?"></textarea>
-                </label>
-                <div className="tweet__btns">
-                    <div className="tweet__list">
-                        <img className="tweet__list-item" src={imageIcon} alt="icon-img" />
-                        <img className="tweet__list-item" src={gificon} alt="icon-gif" />
-                        <img className="tweet__list-item" src={chartIcon} alt="icon-chart" />
-                        <img className="tweet__list-item" src={smileIcon} alt="icon-smile" />
-                        <img className="tweet__list-item" src={calendarIcon} alt="icon-calendar" />
+        <>
+            {openModalTweet && <div className="tweet">
+                <div className="tweet__background"></div>
+
+                <form className="tweet__form">
+                    <div className="tweet__header">
+                        <img onClick={() => setOpenModalTweet(false)} className="tweet__header-close" src={closeIcon} alt="close-icon" />
+                        <button className="tweet__header-button">Неотправленные твиты</button>
                     </div>
-                    <button className="tweet__btn">Твитнуть</button>
-                </div>
-            </form>
-        </div>
+
+                    <label className="tweet__label">
+                        <img className="tweet__label-avatar" src="https://www.svgrepo.com/show/384670/account-avatar-profile-user.svg" alt="avatar" />
+                        <textarea value={modalText} onChange={handleChangeTextArea} className="tweet__label-textarea" name="tweet-form" id="tweet-form" cols={20} rows={20} placeholder="Что происходит?"></textarea>
+                    </label>
+                    <div className="tweet__btns">
+                        <ModalTweetBtns handleAddTweet={handleAddTweet} />
+                    </div>
+                </form>
+            </div>}</>
     )
 }
 

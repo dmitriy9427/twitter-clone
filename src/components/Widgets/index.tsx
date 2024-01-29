@@ -2,7 +2,7 @@ import "./Widgets.scss"
 
 const Widgets = () => {
     return (
-        <section className="widgets">
+        <div className="widgets">
 
             <label className='widgets__label' htmlFor="search">
 
@@ -41,8 +41,7 @@ const Widgets = () => {
                     </svg></li>
                 </ul>
             </div>
-
-        </section>
+        </div>
     )
 }
 

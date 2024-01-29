@@ -15,6 +15,8 @@ import Home from './components/Home';
 const App = () => {
   const [openModalLogin, setOpenModalLogin] = useState<boolean>(false)
   const [openModalRegister, setOpenModalRegister] = useState<boolean>(false)
+  const [text, setText] = useState<string>('');
+
 
   const navigate = useNavigate()
 
@@ -25,8 +27,9 @@ const App = () => {
     navigate('/')
   }
 
+
   return (
-    <div className="App">
+    <body>
       <Routes>
         <Route path='/' element={<Auth setOpenModalLogin={setOpenModalLogin} setOpenModalRegister={setOpenModalRegister} />}>
           <Route path='login' element={<Login closeModal={closeModal} />} />
@@ -43,7 +46,7 @@ const App = () => {
           <Route path="profile" element={<Profile />} />
         </Route>
       </Routes>
-    </div >
+    </body>
   );
 }
 

@@ -1,20 +1,20 @@
-import React from 'react';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import { Outlet } from 'react-router-dom';
 import './index.scss'
 import Widgets from '../../components/Widgets';
 
-const Main = () => {
+
+const Main: React.FC = () => {
 
 
     return (
-        <div className='main'>
+        <main className='main'>
             <Sidebar />
 
             <Outlet />
 
             <Widgets />
-        </div>
+        </main>
     )
 }
 
