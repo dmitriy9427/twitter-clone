@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 // import Auth from './pages/Auth/Auth';
 // import Login from './pages/ModalsWindow/Login';
 // import Register from './pages/ModalsWindow/Register';
@@ -25,13 +25,13 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <Routes>
-        {/* <Route path='/' element={<Auth setOpenModalLogin={setOpenModalLogin} setOpenModalRegister={setOpenModalRegister} />}>
+
+      {/* <Route path='/' element={<Auth setOpenModalLogin={setOpenModalLogin} setOpenModalRegister={setOpenModalRegister} />}>
           {/* <Route path='login' element={<Login closeModal={closeModal} />} />
           <Route path='register' element={<Register closeModal={closeModal} />} /> */}
-        {/* </Route> */}
-
-        <Route path='/' element={<Main />}>
+      {/* </Route> */}
+      <Routes>
+        <Route path='/twitter-clone/' element={<Main />}>
           <Route path='home' element={<Home />} />
           <Route path="search" element={<Search />} />
           <Route path="notifications" element={<Notifications />} />
