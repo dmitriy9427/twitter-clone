@@ -4,6 +4,21 @@
 
 ## Стек:
 
+- Typescript
+
+- React.js
+
+  - функциональные компоненты
+  - tsx
+  - хуки (useState, useEffect, useContext, useRef, useCallback)
+  - react-router v6(useNavigate, Link, useParams, Outlet, useLocation)
+
+- CSS3(SCSS, module.scss)
+
+  - Flexbox
+  - Grid Layout
+  - @media-запросы
+
 ## Описание и функциональность:
 
 #### Инструменты разработки:
