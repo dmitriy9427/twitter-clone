@@ -1,13 +1,18 @@
-import React, { useEffect } from 'react'
-import styles from './Login.module.scss'
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import closeIcon from '../../images/close.svg';
-import twitterIcon from '../../images/twitter.svg'
+import twitterIcon from '../../images/twitter.svg';
+
+import styles from './Login.module.scss';
+
 
 type LoginProps = {
     closeModal: () => void
 }
 
 const Login: React.FC<LoginProps> = ({ closeModal }) => {
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         document.body.style.overflow = "hidden";
@@ -27,12 +32,17 @@ const Login: React.FC<LoginProps> = ({ closeModal }) => {
         return () => document.removeEventListener('keydown', handleEscapeKey)
     }, [])
 
+    function onSubmitLogin(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault()
+        navigate('/twitter-clone/home')
+    }
+
 
     return (<>
 
         <div className={styles.div}></div>
         <div className={styles.wrapper} >
-            <form className={styles.form}>
+            <form onSubmit={onSubmitLogin} className={styles.form}>
                 <div onClick={closeModal} className={styles.close}><img className={styles.closeIcon} src={closeIcon} alt="close-icon" /></div>
                 <img className={styles.twitterIcon} src={twitterIcon} alt="twitterIcon" />
                 <h4 className={styles.header}>Войти в твиттер</h4>

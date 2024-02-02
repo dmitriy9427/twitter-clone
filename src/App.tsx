@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import Auth from './pages/Auth/Auth';
-// import Login from './pages/ModalsWindow/Login';
-// import Register from './pages/ModalsWindow/Register';
+import { useNavigate } from 'react-router-dom';
 import Main from './pages/MainPage';
 import Search from './components/Search';
 import Notifications from './components/Notifications';
@@ -11,27 +9,34 @@ import Bookmarks from './components/Bookmarks';
 import Lists from './components/Lists';
 import Profile from './components/Profile';
 import Home from './components/Home';
+import Auth from './pages/Auth';
+import Login from './pages/ModalsWindow/Login';
+import Register from './pages/ModalsWindow/Register';
+
 
 const App: React.FC = () => {
-  // const [openModalLogin, setOpenModalLogin] = useState<boolean>(false)
-  // const [openModalRegister, setOpenModalRegister] = useState<boolean>(false)
+  const [openModalLogin, setOpenModalLogin] = useState<boolean>(false)
+  const [openModalRegister, setOpenModalRegister] = useState<boolean>(false)
 
-  // const closeModal = () => {
-  //   setOpenModalRegister(false)
-  //   setOpenModalLogin(false)
-  //   navigate('/')
-  // }
+  const navigate = useNavigate()
+
+  const closeModal = () => {
+    setOpenModalRegister(false)
+    setOpenModalLogin(false)
+    navigate('/twitter-clone/')
+  }
 
 
   return (
     <div>
 
-      {/* <Route path='/' element={<Auth setOpenModalLogin={setOpenModalLogin} setOpenModalRegister={setOpenModalRegister} />}>
-          {/* <Route path='login' element={<Login closeModal={closeModal} />} />
-          <Route path='register' element={<Register closeModal={closeModal} />} /> */}
-      {/* </Route> */}
+
       <Routes>
-        <Route path='/twitter-clone/' element={<Main />}>
+        <Route path='/twitter-clone/' element={<Auth setOpenModalLogin={setOpenModalLogin} setOpenModalRegister={setOpenModalRegister} />}>
+          <Route path='login' element={<Login closeModal={closeModal} />} />
+          <Route path='register' element={<Register closeModal={closeModal} />} />
+        </Route>
+        <Route path='/twitter-clone/' element={<Main />} >
           <Route path='home' element={<Home />} />
           <Route path="search" element={<Search />} />
           <Route path="notifications" element={<Notifications />} />
