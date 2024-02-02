@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+## Проект: клон твиттера.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [Ссылка для просмора демо](dmitriy9427.github.io/twitter-clone/)
 
-## Available Scripts
+## Стек:
 
-In the project directory, you can run:
+## Описание и функциональность:
 
-### `npm start`
+#### Инструменты разработки:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Git
+- Visual Studio Code
+  - prettier
+  - powershell
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Инструкция по установке:
 
-### `npm test`
+Установите себе GIT - система контроля версий, перейдя по ссылке на офицальный сайт:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+ https://git-scm.com/
+```
 
-### `npm run build`
+После установки GIT, склонируйте репозиторий к себе на компьютер с помощью команды:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+git clone https://github.com/dmitriy9427/twitter-clone.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Далее установите редактор кода, я использую Visual Studio Code, скачать можно по ссылке указанной ниже.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+https://code.visualstudio.com/
+```
 
-### `npm run eject`
+Установите Node.js
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+https://nodejs.org/ru
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Запустите в редакторе кода склонированную папку, откройте терминал и запустите команду для установки всех необходимых зависимостей для проекта:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Когда все установлено, можно запускать проект локально с помощью команды:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm start или npm run start
+```
