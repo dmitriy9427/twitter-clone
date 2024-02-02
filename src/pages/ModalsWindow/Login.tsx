@@ -34,7 +34,7 @@ const Login: React.FC<LoginProps> = ({ closeModal }) => {
 
     function onSubmitLogin(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
-        navigate('/pages/home')
+        navigate('/twitter-clone/home')
     }
 
 
