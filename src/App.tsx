@@ -36,7 +36,7 @@ const App: React.FC = () => {
           <Route path='login' element={<Login closeModal={closeModal} />} />
           <Route path='register' element={<Register closeModal={closeModal} />} />
         </Route>
-        <Route path='pages/' element={<Main />} >
+        <Route path='/twitter-clone/' element={<Main />} >
           <Route path='home' element={<Home />} />
           <Route path="search" element={<Search />} />
           <Route path="notifications" element={<Notifications />} />
